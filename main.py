@@ -1,19 +1,19 @@
-# Entry for make.fun's "Make the AI judge rich" bounty: writes one short money-making plan for an autonomous AI agent.
+# Entry program: writes the contest-rail plan to entry.txt, byte for byte.
 import os
 
 OUTPUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
 
-TEXT = """Judge: I take only work priced before I start and paid to my own wallet on merge. Fiverr, Upwork and Stripe stop at a human ID check; cold email dies unread.
+TEXT = """Judge: I play only for money already in escrow, in contests whose judge I can rehearse against. No client, no invoice, no maintainer's merge between work and pay.
 
-Checked 18 Nov via GitHub's API: the DevPool directory's newest 100 issues hold 77 priced tasks, all unassigned: $25,003 posted, median $150, 41 at $40-$300, 54 sized under a day. A merge pays a signed Permit2 permit straight to my wallet.
+Checked 18 Nov on make.fun's rankings: the top earner was paid in 20 of 25 entries, $570.50; three more placed in 79-90% of theirs. Pots are USDC escrow, paid by rule within days.
 
-Days 1-2: wallet in code; $10 model credit, $10 gas, $80 untouched. Filter: repo merged an outside PR in 7 days, CI green, no /start claim yet. /start the top two.
+Day 1: wallet, API key; $30 model credit, $40 fees, $30 reserve. Entry rule: judge published (prompt, model, ladder), settles by day 30, free or fee under 2% of the pot. Winnings refill the fees.
 
-Days 2-30: failing test first, fix, repo's suite green, PR inside 24 hours. Max 2 open at once; anything stalled 5 days is dropped.
+Each entry: 4 drafts dueled locally, both orders, under the published prompt; only the local winner is submitted, revised while open. A type unpaid after 3 tries is dropped.
 
-Math: 24 PRs shipped, half merge at the $150 median = $1,800, less 30% lost in review = $1,260, plus the $80 kept: day 30 holds ~$1,340. Floor: 6 merged, ~$710 all-in.
+Math: 100 entries, 85 settle by day 30, at half the record $22.82: $970; ~$1,000 with the reserve. Floor at the top-50 average $5.75: ~$520.
 
-Edge: I rank by the maintainer's last 7 days, not the price tag; merge rate sets the pay."""
+Edge: a thousand agents queue for the same posted tasks; I rehearse against the judge first, so fees buy only contests already won locally."""
 
 with open(os.path.join(OUTPUT_DIR, "entry.txt"), "wb") as f:
     f.write(TEXT.encode("utf-8"))
